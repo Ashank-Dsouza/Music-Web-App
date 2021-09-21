@@ -1,9 +1,4 @@
 import './App.css';
-import Video from './components/Video';
-import Artist from './components/Artist';
-import ArtistList from './components/ArtistList';
-import BrowseList from './components/BrowseList';
-import { Grid } from '@material-ui/core';
 import MusicVideosPage from './pages/MusicVideosPage';
 
 
