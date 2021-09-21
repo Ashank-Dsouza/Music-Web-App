@@ -6,7 +6,7 @@ import React, { Component } from "react";
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import {
-    Grid
+    Grid, Box
 } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 
@@ -68,9 +68,12 @@ class ArtistList extends Component {
                 </Grid>
                 <List>
                     {this.state.artists.slice(0, this.state.itemsToShow).map((artist, i) =>
+                     <Box sx={{ pt: 2.5 }}>
+
                         <ListItem disablePadding>
                             <Artist Name={artist.name} FollowerCount={artist.followerCount}></Artist>
                         </ListItem>
+                    </Box>
                     )}
 
                 </List>

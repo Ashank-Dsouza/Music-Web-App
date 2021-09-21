@@ -2,7 +2,7 @@
 import Video from './Video';
 import React, { Component } from "react";
 import {
-    Grid
+    Grid, Box
 } from "@material-ui/core";
 import BoldHeading from './BoldHeading';
 import audio from "../audios/Manike-Mage.mp3";
@@ -74,6 +74,7 @@ class BrowseList extends Component {
                 <BoldHeading>Featured Videos</BoldHeading>
                 {this.rows.slice(0, this.state.itemsToShow).map((videos, i) =>
                     <Grid container spacing={3}>
+
                         <Grid item xs={6}>
                             <Video Song={videos[0].audioElement} Year={videos[0].year} ArtistName={videos[0].artistName} SongName={videos[0].songName}></Video>
                         </Grid>
@@ -84,7 +85,6 @@ class BrowseList extends Component {
                             :
                             null
                         }
-
                     </Grid>
 
                 )}
